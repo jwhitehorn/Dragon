@@ -52,13 +52,14 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - (void) registerBuiltInFunctions{
-    [self execute:@"var JWTransit = {};"];
-    [self define:@"JWTransit.Dispatch" withBlock:^(NSString *queue, JSValue *block){
-        NSLog(@"JWTransit.Dispatch enter!");
+    [self define:@"__JWTransitDispatch" withBlock:^(NSString *queue, JSValue *block){
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             [self invokeBlock:block];
         });
     }];
+    
+    [self execute:@"var JWTransit = {};"];
+    [self execute:@"JWTransit.Dispatch = __JWTransitDispatch;"];
 }
 
 @end
