@@ -34,20 +34,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9641570A187E6A9800F2D826 /* JWTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9641570A187E6A9800F2D826 /* Dragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9641570D187E6A9800F2D826 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9641570F187E6A9800F2D826 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		96415711187E6A9800F2D826 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		96415715187E6A9800F2D826 /* JWTransit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JWTransit-Info.plist"; sourceTree = "<group>"; };
+		96415715187E6A9800F2D826 /* Dragon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dragon-Info.plist"; sourceTree = "<group>"; };
 		96415717187E6A9800F2D826 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96415719187E6A9900F2D826 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9641571B187E6A9900F2D826 /* JWTransit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWTransit-Prefix.pch"; sourceTree = "<group>"; };
+		9641571B187E6A9900F2D826 /* Dragon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dragon-Prefix.pch"; sourceTree = "<group>"; };
 		9641571C187E6A9900F2D826 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
 		9641571D187E6A9900F2D826 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
 		9641571F187E6A9900F2D826 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		96415725187E6A9900F2D826 /* JWTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96415725187E6A9900F2D826 /* DragonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96415726187E6A9900F2D826 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9641572E187E6A9900F2D826 /* JWTransitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JWTransitTests-Info.plist"; sourceTree = "<group>"; };
+		9641572E187E6A9900F2D826 /* DragonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DragonTests-Info.plist"; sourceTree = "<group>"; };
 		96415730187E6A9900F2D826 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96415732187E6A9900F2D826 /* JWTransitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWTransitTests.m; sourceTree = "<group>"; };
 		9641573D187E6B0F00F2D826 /* JWTransit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWTransit.h; path = JWTransit/src/JWTransit.h; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		9641570B187E6A9800F2D826 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9641570A187E6A9800F2D826 /* JWTransit.app */,
-				96415725187E6A9900F2D826 /* JWTransitTests.xctest */,
+				9641570A187E6A9800F2D826 /* Dragon.app */,
+				96415725187E6A9900F2D826 /* DragonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,10 +123,10 @@
 		96415714187E6A9800F2D826 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				96415715187E6A9800F2D826 /* JWTransit-Info.plist */,
+				96415715187E6A9800F2D826 /* Dragon-Info.plist */,
 				96415716187E6A9800F2D826 /* InfoPlist.strings */,
 				96415719187E6A9900F2D826 /* main.m */,
-				9641571B187E6A9900F2D826 /* JWTransit-Prefix.pch */,
+				9641571B187E6A9900F2D826 /* Dragon-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 		9641572D187E6A9900F2D826 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9641572E187E6A9900F2D826 /* JWTransitTests-Info.plist */,
+				9641572E187E6A9900F2D826 /* DragonTests-Info.plist */,
 				9641572F187E6A9900F2D826 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96415709187E6A9800F2D826 /* JWTransit */ = {
+		96415709187E6A9800F2D826 /* Dragon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96415736187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "JWTransit" */;
+			buildConfigurationList = 96415736187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "Dragon" */;
 			buildPhases = (
 				96415706187E6A9800F2D826 /* Sources */,
 				96415707187E6A9800F2D826 /* Frameworks */,
@@ -173,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = JWTransit;
+			name = Dragon;
 			productName = JWTransit;
-			productReference = 9641570A187E6A9800F2D826 /* JWTransit.app */;
+			productReference = 9641570A187E6A9800F2D826 /* Dragon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96415724187E6A9900F2D826 /* JWTransitTests */ = {
+		96415724187E6A9900F2D826 /* DragonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96415739187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "JWTransitTests" */;
+			buildConfigurationList = 96415739187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "DragonTests" */;
 			buildPhases = (
 				96415721187E6A9900F2D826 /* Sources */,
 				96415722187E6A9900F2D826 /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				9641572B187E6A9900F2D826 /* PBXTargetDependency */,
 			);
-			name = JWTransitTests;
+			name = DragonTests;
 			productName = JWTransitTests;
-			productReference = 96415725187E6A9900F2D826 /* JWTransitTests.xctest */;
+			productReference = 96415725187E6A9900F2D826 /* DragonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96415705187E6A9800F2D826 /* Build configuration list for PBXProject "JWTransit" */;
+			buildConfigurationList = 96415705187E6A9800F2D826 /* Build configuration list for PBXProject "Dragon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,8 +223,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96415709187E6A9800F2D826 /* JWTransit */,
-				96415724187E6A9900F2D826 /* JWTransitTests */,
+				96415709187E6A9800F2D826 /* Dragon */,
+				96415724187E6A9900F2D826 /* DragonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,7 +274,7 @@
 /* Begin PBXTargetDependency section */
 		9641572B187E6A9900F2D826 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96415709187E6A9800F2D826 /* JWTransit */;
+			target = 96415709187E6A9800F2D826 /* Dragon */;
 			targetProxy = 9641572A187E6A9900F2D826 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -379,9 +379,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JWTransit/JWTransit-Prefix.pch";
-				INFOPLIST_FILE = "JWTransit/JWTransit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "JWTransit/Dragon-Prefix.pch";
+				INFOPLIST_FILE = "JWTransit/Dragon-Info.plist";
+				PRODUCT_NAME = Dragon;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,9 +392,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JWTransit/JWTransit-Prefix.pch";
-				INFOPLIST_FILE = "JWTransit/JWTransit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "JWTransit/Dragon-Prefix.pch";
+				INFOPLIST_FILE = "JWTransit/Dragon-Info.plist";
+				PRODUCT_NAME = Dragon;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -415,8 +415,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "JWTransitTests/JWTransitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "JWTransitTests/DragonTests-Info.plist";
+				PRODUCT_NAME = DragonTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -434,8 +434,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JWTransit/JWTransit-Prefix.pch";
-				INFOPLIST_FILE = "JWTransitTests/JWTransitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "JWTransitTests/DragonTests-Info.plist";
+				PRODUCT_NAME = DragonTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -444,7 +444,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96415705187E6A9800F2D826 /* Build configuration list for PBXProject "JWTransit" */ = {
+		96415705187E6A9800F2D826 /* Build configuration list for PBXProject "Dragon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96415734187E6A9900F2D826 /* Debug */,
@@ -453,21 +453,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96415736187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "JWTransit" */ = {
+		96415736187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "Dragon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96415737187E6A9900F2D826 /* Debug */,
 				96415738187E6A9900F2D826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		96415739187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "JWTransitTests" */ = {
+		96415739187E6A9900F2D826 /* Build configuration list for PBXNativeTarget "DragonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9641573A187E6A9900F2D826 /* Debug */,
 				9641573B187E6A9900F2D826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

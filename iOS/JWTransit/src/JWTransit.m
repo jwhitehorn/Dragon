@@ -8,6 +8,9 @@
 
 #import "JWTransit.h"
 
+#define UI_THREAD      1
+#define DEFAULT_THREAD 2
+
 @interface JWTransit ()
 
 @property (strong, nonatomic) JSContext *jsContext;
@@ -52,14 +55,23 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - (void) registerBuiltInFunctions{
-    [self define:@"__JWTransitDispatch" withBlock:^(NSString *queue, JSValue *block){
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    [self execute:@"var JWTransit = {};"];
+    [self execute:[NSString stringWithFormat:@"JWTransit.UIThread = %i", UI_THREAD]];
+    [self execute:[NSString stringWithFormat:@"JWTransit.UIThread = %i", DEFAULT_THREAD]];
+    
+    [self define:@"__JWTransitDispatch" withBlock:^(int thread, JSValue *block){
+        dispatch_queue_t queue = thread == UI_THREAD ? dispatch_get_main_queue()
+                                                     : dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
             [self invokeBlock:block];
         });
     }];
-    
-    [self execute:@"var JWTransit = {};"];
     [self execute:@"JWTransit.Dispatch = __JWTransitDispatch;"];
+    
+    [self define:@"__JWTransitIsUIThread" withBlock:^{
+        return [NSThread isMainThread];
+    }];
+    [self execute:@"JWTransit.isUIThread = __JWTransitIsUIThread"];
 }
 
 @end
