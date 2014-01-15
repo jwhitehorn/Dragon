@@ -123,7 +123,7 @@ while(condition) { \
         XCTAssertTrue(true, @"");
     }];
     
-    [transit execute:@"Dragon.Dispatch('low', function(){ success(); });"];
+    [transit execute:@"Dragon.Dispatch(Dragon.DefaultThread, function(){ success(); });"];
     
     WaitUntilBlockCompletes();
 }

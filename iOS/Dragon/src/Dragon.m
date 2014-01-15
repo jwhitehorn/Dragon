@@ -57,7 +57,7 @@
 - (void) registerBuiltInFunctions{
     [self execute:@"var Dragon = {};"];
     [self execute:[NSString stringWithFormat:@"Dragon.UIThread = %i", UI_THREAD]];
-    [self execute:[NSString stringWithFormat:@"Dragon.UIThread = %i", DEFAULT_THREAD]];
+    [self execute:[NSString stringWithFormat:@"Dragon.DefaultThread = %i", DEFAULT_THREAD]];
     
     [self define:@"__DragonDispatch" withBlock:^(int thread, JSValue *block){
         dispatch_queue_t queue = thread == UI_THREAD ? dispatch_get_main_queue()
