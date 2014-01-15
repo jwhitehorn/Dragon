@@ -1,14 +1,14 @@
 //
-//  JWAppDelegate.m
-//  JWTransit
+//  AppDelegate.m
+//  Dragon
 //
 //  Created by Jason Whitehorn on 1/8/14.
 //  Copyright (c) 2014 Jason Whitehorn. All rights reserved.
 //
 
-#import "JWAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation JWAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

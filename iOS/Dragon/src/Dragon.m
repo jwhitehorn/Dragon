@@ -1,17 +1,17 @@
 //
-//  JWTransit.m
-//  TransitTestsIOS
+//  Dragon.m
+//  Dragon
 //
 //  Created by Jason Whitehorn on 1/8/14.
 //  Copyright (c) 2014 Jason Whitehorn. All rights reserved.
 //
 
-#import "JWTransit.h"
+#import "Dragon.h"
 
 #define UI_THREAD      1
 #define DEFAULT_THREAD 2
 
-@interface JWTransit ()
+@interface Dragon ()
 
 @property (strong, nonatomic) JSContext *jsContext;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation JWTransit
+@implementation Dragon
 
 @synthesize jsContext;
 
@@ -55,23 +55,23 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - (void) registerBuiltInFunctions{
-    [self execute:@"var JWTransit = {};"];
-    [self execute:[NSString stringWithFormat:@"JWTransit.UIThread = %i", UI_THREAD]];
-    [self execute:[NSString stringWithFormat:@"JWTransit.UIThread = %i", DEFAULT_THREAD]];
+    [self execute:@"var Dragon = {};"];
+    [self execute:[NSString stringWithFormat:@"Dragon.UIThread = %i", UI_THREAD]];
+    [self execute:[NSString stringWithFormat:@"Dragon.UIThread = %i", DEFAULT_THREAD]];
     
-    [self define:@"__JWTransitDispatch" withBlock:^(int thread, JSValue *block){
+    [self define:@"__DragonDispatch" withBlock:^(int thread, JSValue *block){
         dispatch_queue_t queue = thread == UI_THREAD ? dispatch_get_main_queue()
                                                      : dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(queue, ^{
             [self invokeBlock:block];
         });
     }];
-    [self execute:@"JWTransit.Dispatch = __JWTransitDispatch;"];
+    [self execute:@"Dragon.Dispatch = __DragonDispatch;"];
     
-    [self define:@"__JWTransitIsUIThread" withBlock:^{
+    [self define:@"__DragonIsUIThread" withBlock:^{
         return [NSThread isMainThread];
     }];
-    [self execute:@"JWTransit.isUIThread = __JWTransitIsUIThread"];
+    [self execute:@"Dragon.isUIThread = __DragonIsUIThread"];
 }
 
 @end

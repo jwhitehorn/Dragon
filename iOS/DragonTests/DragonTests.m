@@ -1,13 +1,13 @@
 //
-//  JWTransitTests.m
-//  JWTransitTests
+//  DragonTests.m
+//  DragonTests
 //
 //  Created by Jason Whitehorn on 1/8/14.
 //  Copyright (c) 2014 Jason Whitehorn. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "JWTransit.h"
+#import "Dragon.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 // Macro - Set the flag for block completion
@@ -28,19 +28,19 @@ while(condition) { \
 } \
 } while(0)
 
-@interface JWTransitTests : XCTestCase
+@interface DragonTests : XCTestCase
 
-@property (strong, nonatomic) JWTransit *transit;
+@property (strong, nonatomic) Dragon *transit;
 
 @end
 
-@implementation JWTransitTests
+@implementation DragonTests
 @synthesize transit;
 
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    transit = [JWTransit new];
+    transit = [Dragon new];
 }
 
 - (void)tearDown {
@@ -123,7 +123,7 @@ while(condition) { \
         XCTAssertTrue(true, @"");
     }];
     
-    [transit execute:@"JWTransit.Dispatch('low', function(){ success(); });"];
+    [transit execute:@"Dragon.Dispatch('low', function(){ success(); });"];
     
     WaitUntilBlockCompletes();
 }
