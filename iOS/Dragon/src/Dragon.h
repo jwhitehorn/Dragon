@@ -11,9 +11,12 @@
 
 @interface Dragon : NSObject
 
++ (Dragon *) defaultInstance;
+
 - (void) loadFile:(NSString *)path encoding:(NSStringEncoding)enc error:(NSError **)error;
 - (void) define:(NSString *)function withBlock:(id)block;
 - (id) execute:(NSString *)statement;
+- (id) callFunction:(NSString *)functionName withArguments:(NSArray *)args;
 - (id) invokeBlock:(JSValue *)block;
 
 @end

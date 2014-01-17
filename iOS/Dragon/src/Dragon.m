@@ -32,6 +32,15 @@
     return self;
 }
 
++ (Dragon *) defaultInstance{
+    static Dragon *instance = nil;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        instance = [Dragon new];
+    });
+    return instance;
+}
+
 - (void) loadFile:(NSString *)path encoding:(NSStringEncoding)enc error:(NSError **)error{
     [jsContext evaluateScript:[NSString stringWithContentsOfFile:path encoding:enc error:error]];
 }
@@ -41,8 +50,15 @@
 }
 
 - (id) execute:(NSString *)statement{
-    NSString *result = [[jsContext evaluateScript:statement] toString];
-    return [result isEqualToString:@"undefined"] ? nil : result;
+    JSValue *result = [jsContext evaluateScript:statement];
+    return [result toObject];
+}
+
+- (id) callFunction:(NSString *)functionName withArguments:(NSArray *)args{
+    JSValue *function = jsContext[functionName];
+    JSValue *result = [function callWithArguments:args];
+    
+    return [result toObject];
 }
 
 - (id) invokeBlock:(JSValue *)block{
