@@ -21,6 +21,9 @@
 		96EDB593188712A500B02510 /* DragonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EDB58B1887121C00B02510 /* DragonTests.m */; };
 		96EDB5971887139D00B02510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96EDB57B188711E800B02510 /* InfoPlist.strings */; };
 		96EDB59A188714CF00B02510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96EDB5891887121C00B02510 /* InfoPlist.strings */; };
+		96EDB5A71889C28D00B02510 /* DragonDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EDB5A61889C28D00B02510 /* DragonDAO.m */; };
+		96EDB5A81889C28D00B02510 /* DragonDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EDB5A61889C28D00B02510 /* DragonDAO.m */; };
+		96EDB5AB1889D03700B02510 /* DragonDAOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EDB5AA1889D03700B02510 /* DragonDAOTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,11 @@
 		96EDB58B1887121C00B02510 /* DragonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragonTests.m; path = DragonTests/DragonTests.m; sourceTree = "<group>"; };
 		96EDB58F1887123100B02510 /* Dragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dragon.h; path = Dragon/src/Dragon.h; sourceTree = "<group>"; };
 		96EDB5901887123100B02510 /* Dragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dragon.m; path = Dragon/src/Dragon.m; sourceTree = "<group>"; };
+		96EDB5A51889C28D00B02510 /* DragonDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragonDAO.h; path = Dragon/src/DragonDAO.h; sourceTree = "<group>"; };
+		96EDB5A61889C28D00B02510 /* DragonDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragonDAO.m; path = Dragon/src/DragonDAO.m; sourceTree = "<group>"; };
+		96EDB5A91889D03700B02510 /* DragonDAOTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragonDAOTests.h; path = DragonTests/DragonDAOTests.h; sourceTree = "<group>"; };
+		96EDB5AA1889D03700B02510 /* DragonDAOTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragonDAOTests.m; path = DragonTests/DragonDAOTests.m; sourceTree = "<group>"; };
+		96EDB5AC1889D1AD00B02510 /* TestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestHelpers.h; path = DragonTests/TestHelpers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,8 @@
 			children = (
 				96EDB58F1887123100B02510 /* Dragon.h */,
 				96EDB5901887123100B02510 /* Dragon.m */,
+				96EDB5A51889C28D00B02510 /* DragonDAO.h */,
+				96EDB5A61889C28D00B02510 /* DragonDAO.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -145,8 +155,11 @@
 			isa = PBXGroup;
 			children = (
 				96EDB5871887121C00B02510 /* DragonTests-Info.plist */,
+				96EDB5AC1889D1AD00B02510 /* TestHelpers.h */,
 				96EDB5881887121C00B02510 /* en.lproj */,
 				96EDB58B1887121C00B02510 /* DragonTests.m */,
+				96EDB5A91889D03700B02510 /* DragonDAOTests.h */,
+				96EDB5AA1889D03700B02510 /* DragonDAOTests.m */,
 			);
 			name = DragonTests;
 			sourceTree = "<group>";
@@ -257,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EDB5911887123100B02510 /* Dragon.m in Sources */,
+				96EDB5A71889C28D00B02510 /* DragonDAO.m in Sources */,
 				96EDB585188711E800B02510 /* main.m in Sources */,
 				96EDB584188711E800B02510 /* AppDelegate.m in Sources */,
 			);
@@ -266,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EDB5A81889C28D00B02510 /* DragonDAO.m in Sources */,
+				96EDB5AB1889D03700B02510 /* DragonDAOTests.m in Sources */,
 				96EDB593188712A500B02510 /* DragonTests.m in Sources */,
 				96EDB5921887124400B02510 /* Dragon.m in Sources */,
 			);

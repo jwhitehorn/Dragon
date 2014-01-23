@@ -9,24 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Dragon.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-
-// Macro - Set the flag for block completion
-#define StartBlock() __block BOOL waitingForBlock = YES
-
-// Macro - Set the flag to stop the loop
-#define EndBlock() waitingForBlock = NO
-
-// Macro - Wait and loop until flag is set
-#define WaitUntilBlockCompletes() WaitWhile(waitingForBlock)
-
-// Macro - Wait for condition to be NO/false in blocks and asynchronous calls
-// Each test should have its own instance of a BOOL condition because of non-thread safe operations
-#define WaitWhile(condition) \
-do { \
-while(condition) { \
-[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]]; \
-} \
-} while(0)
+#import "TestHelpers.h"
 
 @interface DragonTests : XCTestCase
 
@@ -67,6 +50,14 @@ while(condition) { \
 - (void) testCallUndefinedMethod{
     id result = [transit execute:@"foo('bar');"];
     XCTAssertNil(result, @"Result should be nil");
+}
+
+- (void) testCallFunctionWithArguments{
+    [transit define:@"sum" withBlock:^(int a, int b){
+        return a + b;
+    }];
+    NSNumber *result = [transit callFunction:@"sum" withArguments:@[@4, @5]];
+    XCTAssertEqualObjects(result, @9, @"Should equal nine!");
 }
 
 - (void) testCallback{

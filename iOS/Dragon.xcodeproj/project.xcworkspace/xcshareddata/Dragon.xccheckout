@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40ECDB68-EB14-4304-AC1D-580A086D1820</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Dragon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CD5CD998-AC86-496F-B40F-FAE0EBC60220</key>
+		<string>ssh://github.com/jwhitehorn/JWTransit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/Dragon.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CD5CD998-AC86-496F-B40F-FAE0EBC60220</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/jwhitehorn/JWTransit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CD5CD998-AC86-496F-B40F-FAE0EBC60220</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD5CD998-AC86-496F-B40F-FAE0EBC60220</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JWTransit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
