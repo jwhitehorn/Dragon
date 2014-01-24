@@ -42,7 +42,10 @@
 }
 
 - (void) loadFile:(NSString *)path encoding:(NSStringEncoding)enc error:(NSError **)error{
-    [jsContext evaluateScript:[NSString stringWithContentsOfFile:path encoding:enc error:error]];
+    NSString *script = [NSString stringWithContentsOfFile:path encoding:enc error:error];
+    if(script && !error){
+        [jsContext evaluateScript:script];
+    }
 }
 
 - (void) define:(NSString *)function withBlock:(id)block{
