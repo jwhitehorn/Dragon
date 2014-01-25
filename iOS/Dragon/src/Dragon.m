@@ -28,6 +28,7 @@
     if(self){
         jsContext = [[JSContext alloc] initWithVirtualMachine:[JSVirtualMachine new]];
         [self registerBuiltInFunctions];
+        [self execute:@"console.log('Dragon online');"];
     }
     return self;
 }
@@ -43,7 +44,7 @@
 
 - (void) loadFile:(NSString *)path encoding:(NSStringEncoding)enc error:(NSError **)error{
     NSString *script = [NSString stringWithContentsOfFile:path encoding:enc error:error];
-    if(script && !error){
+    if(script){
         [jsContext evaluateScript:script];
     }
 }
@@ -91,6 +92,11 @@
         return [NSThread isMainThread];
     }];
     [self execute:@"Dragon.isUIThread = __DragonIsUIThread"];
+    
+    [self define:@"__log" withBlock:^(NSString *message){
+        NSLog(@"%@", message);
+    }];
+    [self execute:@"console = {}; console.log = __log;"];
 }
 
 @end
